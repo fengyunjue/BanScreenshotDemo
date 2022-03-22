@@ -9,12 +9,14 @@
 #import "MAAutoLayout.h"
 #import "ViewController1.h"
 #import "ViewController2.h"
+#import "ViewController3.h"
 
 @interface ViewController ()
 
 @property (nonatomic, strong) UITextField *textField;
 @property (nonatomic, strong) UIButton *banScreenshotButton;
 @property (nonatomic, strong) UIButton *banScreenshotButton2;
+@property (nonatomic, strong) UIButton *button;
 
 @end
 
@@ -26,6 +28,7 @@
     [self.view addSubview:self.textField];
     [self.view addSubview:self.banScreenshotButton];
     [self.view addSubview:self.banScreenshotButton2];
+    [self.view addSubview:self.button];
     [self.textField ma_makeConstraints:^(MAAutoLayout * _Nonnull make) {
         make.top.equalTo(self.view).offset(100);
         make.leftRight.equalTo(self.view).offsets(20);
@@ -37,6 +40,10 @@
     }];
     [self.banScreenshotButton2 ma_makeConstraints:^(MAAutoLayout * _Nonnull make) {
         make.top.equalTo(self.banScreenshotButton.ma_bottom).offset(100);
+        make.centerX.equalTo(self.view);
+    }];
+    [self.button ma_makeConstraints:^(MAAutoLayout * _Nonnull make) {
+        make.top.equalTo(self.banScreenshotButton2.ma_bottom).offset(100);
         make.centerX.equalTo(self.view);
     }];
 }
@@ -84,5 +91,18 @@
     [self.navigationController pushViewController:[[ViewController2 alloc]init] animated:YES];
 }
 
+- (UIButton *)button{
+    if(!_button){
+        _button = [UIButton buttonWithType:UIButtonTypeCustom];
+        [_button addTarget:self action:@selector(clickButton) forControlEvents:UIControlEventTouchUpInside];
+        [_button setTitle:@"TableView" forState:UIControlStateNormal];
+        [_button setTitleColor:[UIColor blueColor] forState:UIControlStateNormal];
+    }
+    return _button;
+}
+
+- (void)clickButton {
+    [self.navigationController pushViewController:[[ViewController3 alloc]init] animated:YES];
+}
 
 @end

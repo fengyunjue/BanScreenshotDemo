@@ -7,6 +7,7 @@
 
 #import "MAScreenShieldView.h"
 
+/// 仿照https://github.com/RyukieSama/Swifty写的
 @interface MAScreenShieldView()
 
 @property (nonatomic, strong) UIView *safeZone;

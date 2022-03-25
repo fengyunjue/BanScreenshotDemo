@@ -38,8 +38,6 @@
     [self.imageView ma_makeConstraints:^(MAAutoLayout * _Nonnull make) {
         make.center.equalTo(theView);
     }];
-    
-
 }
 
 - (UIImageView *)imageView {

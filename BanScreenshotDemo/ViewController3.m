@@ -27,7 +27,6 @@
     [self.tableView ma_makeConstraints:^(MAAutoLayout * _Nonnull make) {
         make.edge.equalTo(self.view);
     }];
-    
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {

@@ -6,6 +6,7 @@
 //
 
 #import "BaseViewController.h"
+#import "MAScreenShieldView.h"
 
 @interface BaseViewController ()
 
@@ -14,22 +15,18 @@
 @implementation BaseViewController
 
 - (void)loadView {
-    if (self.banScreenshot) {
-        UITextField *textField = [[UITextField alloc] init];
-        textField.secureTextEntry = YES;
-        textField.enabled = NO;
-        if (textField.subviews.firstObject != nil) {
-            self.view = textField.subviews.firstObject;
+    CGRect frame = CGRectMake(0, 0, [UIScreen mainScreen].bounds.size.width, [UIScreen mainScreen].bounds.size.height);;
+    if (@available(iOS 13.2, *)) {
+        if (self.banScreenshot) {
+            self.view = [MAScreenShieldView creactWithFrame:frame];
         }else{
-            self.view = [[UIView alloc] init];
+            self.view = [[UIView alloc] initWithFrame:frame];
         }
     }else{
-        self.view = [[UIView alloc] init];
+        self.view = [[UIView alloc] initWithFrame:frame];
     }
     self.view.userInteractionEnabled = YES;
-    self.view.frame = CGRectMake(0, 0, [UIScreen mainScreen].bounds.size.width, [UIScreen mainScreen].bounds.size.height);
     self.view.backgroundColor = [UIColor whiteColor];
 }
-
 
 @end

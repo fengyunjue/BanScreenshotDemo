@@ -7,9 +7,10 @@
 
 #import "MAScreenShieldView.h"
 
-/// 仿照https://github.com/RyukieSama/Swifty写的
+/// 仿照https://github.com/RyukieSama/Swifty/blob/master/Swifty/Classes/UIKit/UIView/View/ScreenShieldView.swift写的,不过Swifty上的有bug,->在iOS15.0和iOS15.1时,点击到禁止截图界面然后退到后台再进入APP,APP会崩溃
 @interface MAScreenShieldView()
 
+@property (nonatomic, strong) UITextField *textField;
 @property (nonatomic, strong) UIView *safeZone;
 
 @end
@@ -24,7 +25,6 @@
 - (instancetype)initWithFrame:(CGRect)frame {
     self = [super initWithFrame:frame];
     if (self) {
-        self.safeZone = [self makeSecureView] ?: [[UIView alloc] init];
 
         [self addSubview:self.safeZone];
         
@@ -80,23 +80,24 @@
     }
 }
 
-
-- (UIView *)makeSecureView {
-    UITextField *textField = [[UITextField alloc]init];
-    textField.secureTextEntry = YES;
-    UIView *fv = textField.subviews.firstObject;
-    for (UIView *v in fv.subviews) {
-        [v removeFromSuperview];
+- (UITextField *)textField{
+    if(!_textField){
+        _textField = [[UITextField alloc]init];
+        _textField.secureTextEntry = YES;
+        _textField.enabled = NO;
     }
-    fv.userInteractionEnabled = YES;
-    NSString *errorMsg = @"[MAScreenShieldView log] Create safeZone failed!";
-#ifdef DEBUG
-    NSAssert(fv != nil, errorMsg);
-#else
-    NSLog(@"%@",errorMsg);
-#endif
-    return fv;
+    return _textField;
 }
 
+- (UIView *)safeZone{
+    if(!_safeZone){
+        _safeZone = self.textField.subviews.firstObject ?: [[UIView alloc] init];
+        _safeZone.userInteractionEnabled = YES;
+        for (UIView *v in _safeZone.subviews) {
+            [v removeFromSuperview];
+        }
+    }
+    return _safeZone;
+}
 
 @end

@@ -25,8 +25,14 @@
     
     [self.view addSubview:self.tableView];
     [self.tableView ma_makeConstraints:^(MAAutoLayout * _Nonnull make) {
-        make.edge.equalTo(self.view);
+        make.edge.equalToSuperView();
     }];
+    
+    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"移除" style:UIBarButtonItemStyleDone target:self action:@selector(removeTableView)];
+}
+
+- (void)removeTableView {
+    [self.tableView removeFromSuperview];
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
@@ -54,4 +60,5 @@
     }
     return _tableView;
 }
+
 @end

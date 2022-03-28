@@ -15,15 +15,14 @@
 @implementation BaseViewController
 
 - (void)loadView {
-    CGRect frame = CGRectMake(0, 0, [UIScreen mainScreen].bounds.size.width, [UIScreen mainScreen].bounds.size.height);;
-    if (@available(iOS 13.2, *)) {
-        if (self.banScreenshot) {
-            self.view = [MAScreenShieldView creactWithFrame:frame];
+    if (self.banScreenshot) {
+        if (@available(iOS 13.2, *)) {
+            self.view = [MAScreenShieldView creactWithFrame:CGRectMake(0, 0, [UIScreen mainScreen].bounds.size.width, [UIScreen mainScreen].bounds.size.height)];
         }else{
-            self.view = [[UIView alloc] initWithFrame:frame];
+            [super loadView];
         }
     }else{
-        self.view = [[UIView alloc] initWithFrame:frame];
+        [super loadView];
     }
     self.view.userInteractionEnabled = YES;
     self.view.backgroundColor = [UIColor whiteColor];

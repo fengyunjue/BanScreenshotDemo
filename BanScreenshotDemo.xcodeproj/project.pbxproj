@@ -19,10 +19,14 @@
 		84A074CC27E9B68600EF4821 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84A074CA27E9B68600EF4821 /* LaunchScreen.storyboard */; };
 		84A074CF27E9B68600EF4821 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 84A074CE27E9B68600EF4821 /* main.m */; };
 		84A074D827E9B6D500EF4821 /* 123.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 84A074D527E9B6D500EF4821 /* 123.jpg */; };
-		84A074D927E9B6D500EF4821 /* MAAutoLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 84A074D727E9B6D500EF4821 /* MAAutoLayout.m */; };
+		84C03FB72808138100FE89BD /* ViewController4.m in Sources */ = {isa = PBXBuildFile; fileRef = 84C03FB62808138100FE89BD /* ViewController4.m */; };
+		84C03FBA2808165600FE89BD /* ViewController5.m in Sources */ = {isa = PBXBuildFile; fileRef = 84C03FB92808165600FE89BD /* ViewController5.m */; };
+		8C072E2EADCF032D162539A0 /* Pods_BanScreenshotDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D3AB33E1EB4E4B1CCA83832F /* Pods_BanScreenshotDemo.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2AEB140A2ABDB1FC8C35F3E2 /* Pods-BanScreenshotDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BanScreenshotDemo.release.xcconfig"; path = "Target Support Files/Pods-BanScreenshotDemo/Pods-BanScreenshotDemo.release.xcconfig"; sourceTree = "<group>"; };
+		584E99FD005967B78F832D81 /* Pods-BanScreenshotDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BanScreenshotDemo.debug.xcconfig"; path = "Target Support Files/Pods-BanScreenshotDemo/Pods-BanScreenshotDemo.debug.xcconfig"; sourceTree = "<group>"; };
 		8415FFE127E9BB730035EB9D /* ViewController1.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController1.h; sourceTree = "<group>"; };
 		8415FFE227E9BB730035EB9D /* ViewController1.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController1.m; sourceTree = "<group>"; };
 		8415FFE427E9BF5B0035EB9D /* BaseViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BaseViewController.h; sourceTree = "<group>"; };
@@ -44,8 +48,11 @@
 		84A074CD27E9B68600EF4821 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		84A074CE27E9B68600EF4821 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		84A074D527E9B6D500EF4821 /* 123.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 123.jpg; sourceTree = "<group>"; };
-		84A074D627E9B6D500EF4821 /* MAAutoLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MAAutoLayout.h; sourceTree = "<group>"; };
-		84A074D727E9B6D500EF4821 /* MAAutoLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MAAutoLayout.m; sourceTree = "<group>"; };
+		84C03FB52808138100FE89BD /* ViewController4.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController4.h; sourceTree = "<group>"; };
+		84C03FB62808138100FE89BD /* ViewController4.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController4.m; sourceTree = "<group>"; };
+		84C03FB82808165600FE89BD /* ViewController5.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController5.h; sourceTree = "<group>"; };
+		84C03FB92808165600FE89BD /* ViewController5.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController5.m; sourceTree = "<group>"; };
+		D3AB33E1EB4E4B1CCA83832F /* Pods_BanScreenshotDemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BanScreenshotDemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,17 +60,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8C072E2EADCF032D162539A0 /* Pods_BanScreenshotDemo.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		71D5A051AA4E3A6285346641 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D3AB33E1EB4E4B1CCA83832F /* Pods_BanScreenshotDemo.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		79190B828FC91A1ECFF587C8 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				584E99FD005967B78F832D81 /* Pods-BanScreenshotDemo.debug.xcconfig */,
+				2AEB140A2ABDB1FC8C35F3E2 /* Pods-BanScreenshotDemo.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		84A074B027E9B68400EF4821 = {
 			isa = PBXGroup;
 			children = (
 				84A074BB27E9B68500EF4821 /* BanScreenshotDemo */,
 				84A074BA27E9B68500EF4821 /* Products */,
+				79190B828FC91A1ECFF587C8 /* Pods */,
+				71D5A051AA4E3A6285346641 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -88,6 +115,10 @@
 				8415FFE827E9C1150035EB9D /* ViewController2.m */,
 				8415FFEA27E9CAE10035EB9D /* ViewController3.h */,
 				8415FFEB27E9CAE10035EB9D /* ViewController3.m */,
+				84C03FB52808138100FE89BD /* ViewController4.h */,
+				84C03FB62808138100FE89BD /* ViewController4.m */,
+				84C03FB82808165600FE89BD /* ViewController5.h */,
+				84C03FB92808165600FE89BD /* ViewController5.m */,
 				8415FFE427E9BF5B0035EB9D /* BaseViewController.h */,
 				8415FFE527E9BF5B0035EB9D /* BaseViewController.m */,
 				849297C327EC3F0900FD9A76 /* MAScreenShieldView.h */,
@@ -96,8 +127,6 @@
 				84A074C827E9B68600EF4821 /* Assets.xcassets */,
 				84A074CA27E9B68600EF4821 /* LaunchScreen.storyboard */,
 				84A074D527E9B6D500EF4821 /* 123.jpg */,
-				84A074D627E9B6D500EF4821 /* MAAutoLayout.h */,
-				84A074D727E9B6D500EF4821 /* MAAutoLayout.m */,
 				84A074CD27E9B68600EF4821 /* Info.plist */,
 				84A074CE27E9B68600EF4821 /* main.m */,
 			);
@@ -111,9 +140,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 84A074D227E9B68600EF4821 /* Build configuration list for PBXNativeTarget "BanScreenshotDemo" */;
 			buildPhases = (
+				F38D64029E188CF877C4C1E4 /* [CP] Check Pods Manifest.lock */,
 				84A074B527E9B68500EF4821 /* Sources */,
 				84A074B627E9B68500EF4821 /* Frameworks */,
 				84A074B727E9B68500EF4821 /* Resources */,
+				FE0DFFAE435D28DBE8572250 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -170,19 +201,62 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		F38D64029E188CF877C4C1E4 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-BanScreenshotDemo-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FE0DFFAE435D28DBE8572250 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-BanScreenshotDemo/Pods-BanScreenshotDemo-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-BanScreenshotDemo/Pods-BanScreenshotDemo-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-BanScreenshotDemo/Pods-BanScreenshotDemo-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		84A074B527E9B68500EF4821 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				8415FFE927E9C1150035EB9D /* ViewController2.m in Sources */,
+				84C03FB72808138100FE89BD /* ViewController4.m in Sources */,
 				8415FFE327E9BB730035EB9D /* ViewController1.m in Sources */,
 				84A074C427E9B68500EF4821 /* ViewController.m in Sources */,
 				849297C527EC3F0900FD9A76 /* MAScreenShieldView.m in Sources */,
 				8415FFE627E9BF5B0035EB9D /* BaseViewController.m in Sources */,
-				84A074D927E9B6D500EF4821 /* MAAutoLayout.m in Sources */,
 				84A074BE27E9B68500EF4821 /* AppDelegate.m in Sources */,
 				8415FFEC27E9CAE10035EB9D /* ViewController3.m in Sources */,
+				84C03FBA2808165600FE89BD /* ViewController5.m in Sources */,
 				84A074CF27E9B68600EF4821 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -321,12 +395,13 @@
 		};
 		84A074D327E9B68600EF4821 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 584E99FD005967B78F832D81 /* Pods-BanScreenshotDemo.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = BK2H78LXKH;
+				DEVELOPMENT_TEAM = "";
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = BanScreenshotDemo/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -349,12 +424,13 @@
 		};
 		84A074D427E9B68600EF4821 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2AEB140A2ABDB1FC8C35F3E2 /* Pods-BanScreenshotDemo.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = BK2H78LXKH;
+				DEVELOPMENT_TEAM = "";
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = BanScreenshotDemo/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
